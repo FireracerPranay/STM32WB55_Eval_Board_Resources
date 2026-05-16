@@ -1,0 +1,39 @@
+Instructions for Wireless Stack and FUS Update on the Ubyte STM32WB55 Eval Board
+
+All Ubyte STM32WB55 Eval board are programmed with the given FUS and BLE wireless stack as provided with this document. However in case user wanted to upgrade the wireless stack and FUS again, the procedure mentioned below shall be followed.
+
+Please make sure that the Ubyte STM32WB55 Eval board is powered by the onboard USB type-C and STLink Debugger is connected to the SWDIO (or DIO), SWCLK (or CLK) and GND (ground) on the Ubyte STM32WB55 Eval Board.
+
+Go to the STM32cubeprogrammer's "firmware upgrade services" after connecting the Ubyte STM32WB55 Eval Board with STLink and clicking on "connect" on the STM32cubeprogrammer.
+
+Select the "stm32wb5x_FUS_fw.bin" file downloaded with this instructions file by going to browse button located next the file path
+Make sure that the FUS file start address is set as 0x080EC000
+
+Click on the Firmware Upgrade button and wait for the process to be completed.
+
+After the upgrade process is completed, click on the Read FUS infos button to check the FUS version number. Then click on the Start FUS button.
+
+After the above process is completed, select the "stm32wb5x_BLE_Stack_full_fw.bin" by clicking on the browse button next to the file path. Make sure that the Start Address is set to 0x080CE000
+Click on the "Firmware Updated" button to upgrade the wireless stack.
+
+Once the Wireless stack is uploaded, please click on "start wireless stack" button.
+
+This complete the process for the FUS and wireless stack for the Ubyte STM32WB55 Eval Board.
+
+
+
+
+For more information on other wireless stacks available from ST microelectronics, go to the link mentioned below. This shall list down all the available wireless stacks along with the start address for each microcontroller family. In case of the Ubyte STM32WB55 Eval board, the microcontroller STM32WB55CGU6 is used therefore start address mentioned for "STM32WB5xxG(1M)" shall be used for all wireless stacks
+
+file:///F:/Downloads/en.patch-cubewb-v1-17-3/STM32Cube_FW_WB_V1.17.0/Projects/STM32WB_Copro_Wireless_Binaries/STM32WB5x/Release_Notes.html
+
+
+
+For more information on the FUS and it's different version, please visit the link mentioned below
+
+https://wiki.st.com/stm32mcu/wiki/Connectivity:STM32WB_FUS
+
+
+More resources on the STM32WB55 microcontroller
+
+https://www.st.com/en/embedded-software/stm32cubewb.html
